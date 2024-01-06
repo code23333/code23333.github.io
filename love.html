@@ -223,7 +223,7 @@
       bottom: 0;
       margin: 0 auto;
       width: 100%;
-      height: 45vh;
+      height: 40vh;
       color: #ffffff;
       font-size: 26px;
       z-index: 201;
@@ -231,17 +231,18 @@
       font-family: "Montserrat";
     }
     .chat-cloud .said{
-      opacity: 0.6;
+      opacity: 0.5;
       padding: 10px 0;
       width: 500px;
+      overflow: hidden;
     }
     .chat-cloud .bp-said{
-      animation: popup-left 500ms forwards,fade 8s 4s forwards;
+      animation: popup-left 500ms forwards,fade 8s 4s linear forwards,remove 200ms 11s linear forwards;
       color: #ff417d;
     }
     .chat-cloud .my-said{
       color: skyblue;
-      animation: popup-right 500ms forwards,fade 8s 4s forwards;
+      animation: popup-right 500ms forwards,fade 8s 4s linear forwards,remove 200ms 11s linear forwards;
     }
     @keyframes popup-left {
       0%{
@@ -264,11 +265,22 @@
     }
     @keyframes fade{
       0%{
-        opacity: 0.6;
+        opacity: 0.5;
       }
 
       100%{
         opacity: 0;
+      }
+    }
+    @keyframes remove{
+      0%{
+        height: calc(var(--h) - 20px);
+        padding: 10px 0px;
+      }
+
+      100%{
+        height: 0px;
+        padding:0px;
       }
     }
   </style>
@@ -288,7 +300,7 @@
     <!-- 星团文字html -->
     <h3 class="STARDUST1">&nbsp;&nbsp;2023.10.02 - <span id="year"></span>.<span id="month"></span>.<span id="day"></span></h3>
     <h1 class="STARDUST2">玉玲-相遇是缘</h1>
-    <h3 class="STARDUST3">L O V E <strong>❤</strong> M E </h3>
+    <h3 class="STARDUST3">L O V E <strong>❤</strong> Y O U </h3>
     <!-- 爱心html -->
     <img class="img" src="./love_files/bp.png" alt="">
     <canvas id="pinkboard" width="1435" height="429"></canvas>
