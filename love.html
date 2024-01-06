@@ -449,7 +449,7 @@
     function createCanvas(properties) {
       let canvas = document.createElement("canvas");
       canvas.width = properties.width;
-      //   canvas.style.zIndex = 999;
+      canvas.style.height = '130%';
       canvas.height = properties.height;
       let context = canvas.getContext("2d");
       return {
