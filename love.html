@@ -331,7 +331,7 @@
       document.getElementById("day").innerText =  paddingLeft(now.getDate(),"0",2);
       let durDays = (now.getTime() - meetingTime.getTime())/1000/daySeconds;
       let leftSeconds = (now.getTime() - meetingTime.getTime())/1000 % daySeconds;
-      document.getElementById("durInfo").innerHTML = `相识相知${durDays.toFixed(0)}天${leftSeconds.toFixed(0)}秒`;
+      document.getElementById("durInfo").innerHTML = `相识相知${parseInt(durDays)}天${leftSeconds.toFixed(0)}秒`;
     }
     fn();
     setInterval(fn,1000)
